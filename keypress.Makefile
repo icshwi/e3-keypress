@@ -27,10 +27,14 @@
 
 #where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
-include $(REQUIRE_TOOLS)/driver.makefile
+include $(E3_REQUIRE_TOOLS)/driver.makefile
 
 APP:=keypress
 
 SOURCES = keypress.c
 HEADERS = keypress.h
 
+
+# db rule is the default in RULES_E3, so add the empty one
+
+db:
